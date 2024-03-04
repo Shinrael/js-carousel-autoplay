@@ -15,7 +15,7 @@
   width: 70%;
   height: 60%;
   background-color: yellow;
-  position: relative;
+  
   display: flex;
 }
 
@@ -41,8 +41,8 @@
   font-size: x-large;
   transition: all .3s;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 77%;  
+  z-index: 1;
 }
 
 .btn-arrow:hover{
@@ -52,11 +52,11 @@
 }
 
 .btn-arrow.up{
-top: 10px;
+top: 140px
 }
 
 .btn-arrow.down{
-bottom: 10px;
+bottom: 140px;
 }
 
 .hidden{
@@ -66,6 +66,7 @@ bottom: 10px;
 .card-lat{
   height: 100%;
   width: 20%;
+  position: relative;
 }
 
 .card-container{

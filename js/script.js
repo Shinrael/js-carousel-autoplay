@@ -81,7 +81,7 @@ clearInterval(intervalId);
 // Creo l'evento per far avanzare automaticamente lo slider quando il mouse sta fuori dal cardsContainer
 
 cardsContainer.addEventListener('mouseout', function() {
-intervalId = setInterval(goAhead, 3000);
+  setInterval(goAhead, 3000);
 });
 
 

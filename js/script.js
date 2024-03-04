@@ -75,13 +75,13 @@ down.addEventListener('click', function (){
 // Creo l'evento per settare uno stop quando vado sopra al cardsContainer
 
 cardsContainer.addEventListener('mouseover', function() {
-clearInterval(intervalId);
+  clearInterval(intervalId);
 });
 
 // Creo l'evento per far avanzare automaticamente lo slider quando il mouse sta fuori dal cardsContainer
 
 cardsContainer.addEventListener('mouseout', function() {
-  setInterval(goAhead, 3000);
+  intervalId = setInterval(goAhead, 3000);
 });
 
 

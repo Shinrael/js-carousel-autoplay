@@ -4,6 +4,7 @@ const imageContainer = document.querySelector('.image-container');
 const up = document.querySelector('.up');
 const down = document.querySelector('.down');
 const cardsContainer = document.querySelector('.card-lat');
+let intervalId;
 
 let counterImg = 0;
 
@@ -71,10 +72,24 @@ down.addEventListener('click', function (){
 
 })
 
-setInterval(goAhead, 3000);
+// Creo l'evento per settare uno stop quando vado sopra al cardsContainer
+
+cardsContainer.addEventListener('mouseover', function() {
+clearInterval(intervalId);
+});
+
+// Creo l'evento per far avanzare automaticamente lo slider quando il mouse sta fuori dal cardsContainer
+
+cardsContainer.addEventListener('mouseout', function() {
+intervalId = setInterval(goAhead, 3000);
+});
+
+
+
+//////////////////////////////////// FUNCTION
 
 function goAhead() {
-  
+
   // Prima aggiungo la classe hidden
 
   imgCollection[counterImg].classList.add('hidden');

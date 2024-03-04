@@ -65,15 +65,18 @@ up.addEventListener('click', function (){
    cardCollection[counterImg].classList.add('active-card');
 })
 
-down.addEventListener('click', function (){
-  // Prima aggiungo la classe hidden
+down.addEventListener('click', function (){  
 
   goAhead();
+
 })
 
 setInterval(goAhead, 3000);
 
 function goAhead() {
+  
+  // Prima aggiungo la classe hidden
+
   imgCollection[counterImg].classList.add('hidden');
 
   // BONUS 2
